@@ -18,8 +18,8 @@ const p1 = document.getElementsByClassName('p1');
 p1[0].innerHTML = 'Tulisan ini diubah menggunakan Javascript';
 
 // document.querySelector() -> Element
-const p4 = document.querySelector('#b p');
-p4.style.color = 'white';
+// const p4 = document.querySelector('#b p');
+// p4.style.color = 'white';
 
 const li2 = document.querySelector('section#b ul li:nth-child(2)');
 li2.style.backgroundColor = 'red';
@@ -29,3 +29,10 @@ const li = document.querySelectorAll('li')
 for (let i = 0; i < li.length; i++) {
     li[i].innerHTML = 'Tulisan ini dari js';
 }
+
+// mengganti node root
+// const sectionB = document.getElementById('b');
+// const p4 = sectionB.querySelector('p');
+const sectionB = document.querySelector('section#b');
+const p4 = sectionB.getElementsByTagName('p')[0];
+p4.style.backgroundColor = "orange";
